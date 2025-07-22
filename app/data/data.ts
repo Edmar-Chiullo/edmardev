@@ -1,4 +1,13 @@
 
+export interface TopicItem {
+  assunto: string;
+  concluido: boolean;
+}
+
+export type TopicMap = {
+  [key: string]: TopicItem[];
+};
+
 export const technologies = [
     {
         title: 'html',
@@ -57,7 +66,7 @@ export const technologies = [
 ];
 
 // Dados definidos por tópicos de tecnologias
-export const technologyTopics = [{
+export const technologyTopics: TopicMap[] = [{
     html: [
       // 🔰 Nível Iniciante
       { assunto: "O que é HTML e sua importância na web.", concluido: true },
