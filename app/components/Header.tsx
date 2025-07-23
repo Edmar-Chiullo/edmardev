@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import clsx from 'clsx';
+import { scroller } from "react-scroll";
 
 export default function Header() {
   const [hash, setHash] = useState("");
@@ -14,8 +15,17 @@ export default function Header() {
     router.push('/'); 
   }, [router]);
   
+  function scrollToSection(section: string) {
+    scroller.scrollTo(section.replace('#', ''), {
+      duration: 800,
+      delay: 2,
+      smooth: 'easeInOut',
+    });
+  }
+  
   function isActive(content: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
     setHash(content.currentTarget.hash);
+    scrollToSection(content.currentTarget.hash);
   }
 
   return (
@@ -25,9 +35,15 @@ export default function Header() {
           Edmar<span className="text-zinc-200/80">Dev</span>
         </h1>
         <nav className="space-x-4">
-          <Link href="#home" onClick={isActive} className={clsx(`transition`, {
+          <Link 
+            href="#home" 
+            onClick={isActive} 
+            className={clsx(`transition`, 
+              
+            {
             'text-blue-600 hover:text-blue-700': hash === '#home', 'text-zinc-200/80 hover:text-zinc-300/80' : hash !== '#home'
-            })}>
+            })}
+            > 
             Início
           </Link>
           <Link href="#about" onClick={isActive} className={clsx(`hover:text-blue-100 transition`, {
