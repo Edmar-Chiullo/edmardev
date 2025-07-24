@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import clsx from 'clsx';
 import { scroller } from "react-scroll";
+import MenuToggle from "./menu-toggle";
 
 export default function Header() {
   const [hash, setHash] = useState("");
@@ -34,7 +35,8 @@ export default function Header() {
         <h1 className="text-xl font-bold text-blue-700/80">
           Edmar<span className="text-zinc-200/80">Dev</span>
         </h1>
-        <nav className="space-x-4">
+        <MenuToggle />
+        <nav className="space-x-4 lg:visible md:flex md:items-center md:space-x-6 hidden">
           <Link 
             href="#home" 
             onClick={isActive} 
