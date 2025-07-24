@@ -7,6 +7,7 @@ import Image from "next/image";
 import { Element } from "react-scroll";
 
 export default function About() {
+  
   return (
     <Element name="about">
       <section id="about" className="flex flex-col w-full h-full lg:h-screen py-20 gap-16 mx-auto relative text-zinc-100/85">

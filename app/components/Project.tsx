@@ -1,6 +1,6 @@
 'use client';
 
-import ProjectCard from './projectCard';
+import ProjectCard from './project-card';
 import Image from 'next/image';
 import { Element } from 'react-scroll';
 
