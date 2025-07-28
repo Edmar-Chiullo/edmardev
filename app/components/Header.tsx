@@ -32,8 +32,8 @@ export default function Header() {
   return (
     <header className="fixed bg-zinc-900 shadow-md top-0 z-20 w-full">
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-        <h1 className="text-xl font-bold text-blue-700/80">
-          Edmar<span className="text-zinc-200/80">Dev</span>
+        <h1 className="text-2xl md:text-xl font-bold text-blue-700/80">
+          Edmar<span className="text-zinc-200">Dev</span>
         </h1>
         <MenuToggle />
         <nav className="space-x-4 lg:visible md:flex md:items-center md:space-x-6 hidden">

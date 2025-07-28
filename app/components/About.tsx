@@ -24,7 +24,7 @@ export default function About() {
           }}  
         />
         <h1 className="text-3xl text-center">Transformando ideias em soluções digitais</h1>
-        <div className="flex flex-col items-center gap-20 lg:flex-row justify-around w-full px-8">
+        <div className="flex flex-col items-center gap-40 lg:flex-row justify-around w-full px-8">
           <div className="w-full lg:max-w-72 text-start">
             <div className="flex flex-col gap-4 w-full">
               <h2 className="text-4xl text-center  font-bold mb-4 text-blue-600/85 lg:text-2xl">Quem sou</h2>
