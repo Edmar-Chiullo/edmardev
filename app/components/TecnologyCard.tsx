@@ -9,8 +9,8 @@ export default function TechnologyCard({ icon, color, value = 0 }: TechnologyCar
         <Image 
             src={icon}
             alt="Technology Icon html-5"
-            width={35}
-            height={35}
+            width={45}
+            height={45}
             className="rounded-4xl md:rounded-0"
         />        
         <div className="w-full bg-zinc-400 rounded-2xl">

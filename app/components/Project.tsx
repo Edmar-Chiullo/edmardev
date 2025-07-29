@@ -32,9 +32,9 @@ export default function Portfólio() {
 
     return (
         <Element name="portifolio">
-            <section id="portifolio" className="flex flex-col w-full h-full lg:h-screen py-20">
+            <section id="portifolio" className="flex flex-col justify-between w-full h-full lg:h-screen pt-20 pb-4">
                 <Image
-                    src="/background-project.png"
+                    src="/background.png"
                     alt="Background Image"
                     className="absolute w-full h-full"
                     fill
@@ -46,7 +46,7 @@ export default function Portfólio() {
                     }}
                 />
                 <div className="w-full lg:max-w-6xl mx-auto px-4 gap-2 lg:gap-0">
-                    <h2 className="text-4xl text-center lg:text-start lg:text-3xl font-bold mb-8 text-blue-700">Portfólio</h2>
+                    <h2 className="text-4xl text-center lg:text-start lg:text-2xl font-bold mb-8 text-blue-700">Portfólio</h2>
                     <p className="text-lg text-zinc-200 mb-4">Aqui estão alguns dos meus projetos recentes:</p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:gap-6 px-2">
                         {
@@ -58,7 +58,7 @@ export default function Portfólio() {
                         }
                     </div>
                 </div>
-                <div className='self-center mt-10'>
+                <div className='self-center place-items-end'>
                     <Pagination totalPages={project.length / 4} pageProject={pageProject}/>
                 </div>
             </section>

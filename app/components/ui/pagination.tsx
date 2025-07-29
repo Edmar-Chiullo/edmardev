@@ -13,8 +13,6 @@ export default function Pagination({ totalPages, pageProject }: { totalPages: nu
 
   return (
     <>
-      {/*  NOTE: Uncomment this code in Chapter 11 */}
-
       <div className="inline-flex">
         <PaginationArrow
           direction="left"
