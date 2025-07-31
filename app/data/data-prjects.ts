@@ -1,69 +1,25 @@
 
 export const project = [
     {
-        image: 'Imagem projeto 1',
-        title: 'Titúlo do projeto',
-        description: 'Descrição do projeto',
-        imageFiles: [
-            {
-                imageName: 'Tela inicial',
-                url: '/images/pce-tools/home-pcetools.png'
-            }
-        ]
+        title: 'Recebimento CPD',
+        description: 'Recebimento CPD é uma das aplicações contidas no software pce-tools, que fornece uma tela inicial para cadastrar motoristas na chegada ao Centro De Distribuição para descarga.',
+        image: '/imgs-projetos/pce-tools-cpd.png',        
     },
     {
-        image: 'Imagem projeto 2',
-        title: 'Titúlo do projeto',
-        description: 'Descrição do projeto'
+        title: 'Pull Time',
+        description: 'Pull Time, fornece uma visibilidade que permite a qualquer pessoa saber (visualmente), há estão todas as cargas paradas no piso do recebimento.',
+        image: '/imgs-projetos/pulltime1.png',        
     },
     {
-        image: 'Imagem projeto 3',
-        title: 'Titúlo do projeto',
-        description: 'Descrição do projeto'
+        
+        title: 'Entrada Recebimento',
+        description: 'Recebimento CPD é uma das aplicações contidas no software pce-tools, que fornece uma tela inicial para gestão de todas as cargas liberadas pelo CPD.',
+        image: '/imgs-projetos/pce-tools-recebimento1.png',        
     },
     {
-        image: 'Imagem projeto 4',
-        title: 'Titúlo do projeto',
-        description: 'Descrição do projeto'
-    },
-    {
-        image: 'Imagem projeto 5',
-        title: 'Titúlo do projeto',
-        description: 'Descrição do projeto'
-    },
-    {
-        image: 'Imagem projeto 6',
-        title: 'Titúlo do projeto',
-        description: 'Descrição do projeto'
-    },
-    {
-        image: 'Imagem projeto 7',
-        title: 'Titúlo do projeto',
-        description: 'Descrição do projeto'
-    },
-    {
-        image: 'Imagem projeto 8',
-        title: 'Titúlo do projeto',
-        description: 'Descrição do projeto'
-    },
-    {
-        image: 'Imagem projeto 9',
-        title: 'Titúlo do projeto',
-        description: 'Descrição do projeto'
-    },
-    {
-        image: 'Imagem projeto 10',
-        title: 'Titúlo do projeto',
-        description: 'Descrição do projeto'
-    },
-    {
-        image: 'Imagem projeto 11',
-        title: 'Titúlo do projeto',
-        description: 'Descrição do projeto'
-    },
-    {
-        image: 'Imagem projeto 12',
-        title: 'Titúlo do projeto',
-        description: 'Descrição do projeto'
+        
+        title: 'To Fill In',
+        description: 'To Fill In é um projeto de (automação) que auxilia no preechimento de formulário.',
+        image: '/imgs-projetos/tofillin1.png',        
     },
 ]
