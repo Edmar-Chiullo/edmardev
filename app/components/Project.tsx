@@ -32,7 +32,7 @@ export default function Portfólio() {
 
     return (
         <Element name="portifolio">
-            <section id="portifolio" className="relative flex flex-col justify-between w-full h-full lg:h-screen pt-20 pb-4">
+            <section id="portifolio" className="relative flex flex-col justify-between w-full h-full min-h-screen lg:h-screen pt-20 pb-4">
                     <Image
                         src="/background-project.png"
                         alt="Background Image"
@@ -41,7 +41,8 @@ export default function Portfólio() {
                         priority
                         style={{
                             objectFit: 'cover',
-                            opacity: 0.2
+                            opacity: 0.2,
+                            filter: 'brightness(0.7)'
                         }}
                     />
                 <div className="w-full lg:max-w-6xl mx-auto px-4 gap-2 lg:gap-0 mb-6">
