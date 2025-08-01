@@ -33,18 +33,19 @@ export default function Portfólio() {
     return (
         <Element name="portifolio">
             <section id="portifolio" className="relative flex flex-col justify-between w-full h-full min-h-screen lg:h-screen pt-20 pb-4">
-                    <Image
-                        src="/background-project.png"
-                        alt="Background Image"
-                        fill
-                        sizes="100vw"
-                        priority
-                        style={{
-                            objectFit: 'cover',
-                            opacity: 0.2,
-                            filter: 'brightness(0.7)'
-                        }}
-                    />
+                <div className='absolute z-[-2] w-full inset-0 h-screen lg:h-screen bg-zinc-950/70'></div>
+                <Image
+                    src="/background-project.png"
+                    alt="Background Image"
+                    fill
+                    className='absolute'
+                    sizes="100vw"
+                    priority
+                    style={{
+                        objectFit: 'cover',
+                        zIndex: -3
+                    }}
+                />
                 <div className="w-full lg:max-w-6xl mx-auto px-4 gap-2 lg:gap-0 mb-6">
                     <h2 className="text-4xl text-center lg:text-start lg:text-2xl font-bold mb-8 text-blue-700">Portfólio</h2>
                     <p className="text-lg text-zinc-200 mb-4">Aqui estão alguns dos meus projetos recentes:</p>
