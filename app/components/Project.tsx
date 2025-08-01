@@ -33,7 +33,7 @@ export default function Portfólio() {
     return (
         <Element name="portifolio">
             <section id="portifolio" className="relative flex flex-col justify-between w-full h-full min-h-screen lg:h-screen pt-20 pb-4">
-                <div className='absolute z-[-2] w-full inset-0 h-screen lg:h-screen bg-zinc-950/70'></div>
+                <div className='absolute z-[-2] w-full inset-0 h-screen lg:h-screen bg-zinc-950/85 md:bg-zinc-950/75'></div>
                 <Image
                     src="/background-project.png"
                     alt="Background Image"
