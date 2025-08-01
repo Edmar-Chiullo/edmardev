@@ -36,13 +36,12 @@ export default function Portfólio() {
                     <Image
                         src="/background-project.png"
                         alt="Background Image"
-                        className="absolute w-full h-full"
+                        className="absolute"
                         fill
                         sizes="100vw"
                         priority
                         style={{
                             objectFit: 'cover',
-                            zIndex: -1,
                             opacity: 0.2
                         }}
                     />
