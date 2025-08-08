@@ -9,6 +9,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  title: "edmardev",
+  description: "Desenvolvedor freelancer especializado em soluções digitais",
+  themeColor: 'black',
   viewport: "width=device-width, initial-scale=1.0",  
   keywords: [
     "freelancer",

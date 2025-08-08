@@ -9,15 +9,21 @@ import Pagination from './ui/pagination';
 import ProjectCard from './project-card';
 
 type Project = {    
+    id: string
     image: string,
     title: string,
     description: string
 }
 
+interface ImageListProps {
+    title: string
+    image: string
+}
+
 export default function Portfólio() {
     
     const [ getProject, setGetProject ] = useState<Project[]>()
-    
+     
     useEffect(() => {
         const totalPages = project.slice(0, 4)
         setGetProject(totalPages)
@@ -29,11 +35,10 @@ export default function Portfólio() {
         const totalPages = pageNumber === 1 ? project.slice(intRangeProject, totalProject) : project.slice(intRangeProject, intRangeProject * 2) 
         setGetProject(totalPages)
     }
-
+        
     return (
         <Element name="portifolio">
             <section id="portifolio" className="relative flex flex-col justify-between w-full h-full min-h-screen lg:h-screen pt-20 pb-4">
-                <div className='absolute z-[-2] w-full inset-0 h-screen lg:h-screen bg-zinc-950/85 md:bg-zinc-950/75'></div>
                 <Image
                     src="/background-project.png"
                     alt="Background Image"
@@ -51,9 +56,9 @@ export default function Portfólio() {
                     <p className="text-lg text-zinc-200 mb-4">Aqui estão alguns dos meus projetos recentes:</p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:gap-6 px-2">
                         {
-                            getProject !== undefined ? getProject.map(({ title, description, image }, k) => {
+                            getProject !== undefined ? getProject.map(({ id, title, description }, k) => {
                                     return (
-                                        <ProjectCard key={k} title={title} description={description} image={image}/>
+                                        <ProjectCard key={k} id={id} title={title} description={description} />
                                     )
                                 }) : <h1>Loading...</h1>
                         }

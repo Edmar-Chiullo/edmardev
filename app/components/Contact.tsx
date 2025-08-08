@@ -8,7 +8,7 @@ export default function Contact() {
         <h2 className="text-3xl font-bold lg:text-2xl text-blue-700/80">Vamos conversar?</h2>
         <p className="text-lg">Entre em contato para tirar dúvidas ou solicitar um orçamento.</p>
         <a
-          href="mailto:edmarcarlos@iiitech.com.br"
+          href="mailto:https://wa.me/43999147899?text=MENSAGEM"
           className="max-w-96 self-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"
         >
           Fale comigo
