@@ -1,5 +1,7 @@
 'use client'
 
+import Image from "next/image"
+
 interface ImageListProps {
     title: string
     image: string
@@ -11,17 +13,19 @@ export default function ProjectCard({ id, title, description }: { id: string, ti
             <div>
                 <h2>Criado por EdmarDev</h2>
             </div>
-            <iframe 
-                width="560" 
-                height="315" 
-                className=" w-full rounded-2xl"
-                src="https://www.youtube.com/embed/z4fn5yi7BI4?si=ds9cwmLWF8iU1Wgb" 
-                title="YouTube video player" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerPolicy="strict-origin-when-cross-origin" 
-                allowFullScreen
-                >
-            </iframe>            
+            <div className="absolute left-0 top-15 z-40 w-64 h-32 rounded-2xl">
+                <Image
+                    src="/embreve.jpg"
+                    alt="Background Image"
+                    fill
+                    sizes="100vw"
+                    priority
+                    style={{
+                        objectFit: 'contain',
+                        zIndex: -3
+                    }}
+                />           
+            </div>
             <div>
                 <h2 className="text-2xl md:text-lg font-bold mb-1">{title}</h2>
                 <p className="text-sm">{`${description.slice(0, 50)}...`}</p>     
