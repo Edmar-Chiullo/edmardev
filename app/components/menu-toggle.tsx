@@ -1,6 +1,6 @@
 export default function MenuToggle() {
   return (
-    <button name="menuToggle" className="md:hidden p-2 text-zinc-200 hover:text-blue-600 transition">
+    <button name="btn_menu_toggle" className="md:hidden p-2 text-zinc-200 hover:text-blue-600 transition">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-8 w-8"
