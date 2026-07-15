@@ -5,17 +5,7 @@ import Contact from "@/app/components/Contact";
 import Footer from "@/app/components/Footer";
 import Portfólio from "./components/Project";
 
-export default async function Home(props: {
-  searchParams?: Promise<{
-      query?: string;
-      page?: string;
-  }>;
-  }) {
-  
-  const searchParams = await props.searchParams;
-  const query = searchParams?.query || '';
-  
-  console.log(query)
+export default async function Home() {
   return (
     <main className="w-full h-screen bg-gray-50 text-gray-900">
       <HomeContent />

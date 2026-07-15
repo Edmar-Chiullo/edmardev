@@ -4,41 +4,55 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 import { Element } from 'react-scroll';
-import { project } from '../data/data-prjects';
+import { projects } from '../data/data-projects';
 import Pagination from './ui/pagination';
 import ProjectCard from './project-card';
+import Carrossel from "./server/carrossel"
 
-type Project = {    
+type Project = {
     id: string
     image: string,
     title: string,
-    description: string
-}
-
-interface ImageListProps {
-    title: string
-    image: string
+    description: string,
+    imageList?: { title: string; image: string }[]
 }
 
 export default function Portfólio() {
-    
+
     const [ getProject, setGetProject ] = useState<Project[]>()
-     
+    const [ openCarrossel, setOpenCarrossel ] = useState(false)
+    const [ selectedImages, setSelectedImages ] = useState<{title: string; image: string}[]>([])
+    const [ selectedTitle, setSelectedTitle ] = useState('')
+
     useEffect(() => {
-        const totalPages = project.slice(0, 4)
+        const totalPages = projects.slice(0, 4)
         setGetProject(totalPages)
     },[])
 
     function pageProject(pageNumber: number) {
         const totalProject = 4
         const intRangeProject = (pageNumber - 1) * totalProject
-        const totalPages = pageNumber === 1 ? project.slice(intRangeProject, totalProject) : project.slice(intRangeProject, intRangeProject * 2) 
+        const totalPages = pageNumber === 1 ? projects.slice(intRangeProject, totalProject) : projects.slice(intRangeProject, intRangeProject * 2)
         setGetProject(totalPages)
     }
-        
+
+    function openProjectCarousel(title: string, images: {title: string; image: string}[]) {
+        setSelectedTitle(title)
+        setSelectedImages(images)
+        setOpenCarrossel(true)
+    }
+
     return (
         <Element name="portifolio">
             <section id="portifolio" className="relative flex flex-col justify-between w-full h-full min-h-screen lg:h-screen pt-20 pb-4">
+
+                {openCarrossel && (
+                    <Carrossel
+                        images={selectedImages}
+                        title={selectedTitle}
+                        onClose={() => setOpenCarrossel(false)}
+                    />
+                )}
                 <Image
                     src="/background-project.png"
                     alt="Background Image"
@@ -56,16 +70,23 @@ export default function Portfólio() {
                     <p className="text-lg text-zinc-200 mb-4">Aqui estão alguns dos meus projetos recentes:</p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:gap-6 px-2">
                         {
-                            getProject !== undefined ? getProject.map(({ id, title, description }, k) => {
+                            getProject !== undefined ? getProject.map(({ id, title, description, image, imageList }, k) => {
                                     return (
-                                        <ProjectCard key={k} id={id} title={title} description={description} />
+                                        <ProjectCard
+                                            key={k}
+                                            id={id}
+                                            title={title}
+                                            description={description}
+                                            image={image}
+                                            setCarrossel={() => openProjectCarousel(title, imageList || [])}
+                                        />
                                     )
                                 }) : <h1>Loading...</h1>
                         }
                     </div>
                 </div>
                 <div className='self-center place-items-end'>
-                    <Pagination totalPages={project.length / 4} pageProject={pageProject}/>
+                    <Pagination totalPages={Math.ceil(projects.length / 4)} pageProject={pageProject}/>
                 </div>
             </section>
         </Element>
