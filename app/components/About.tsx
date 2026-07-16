@@ -7,7 +7,7 @@ export default function About() {
   
   return (
     <Element name="about">
-      <section id="about" className="flex flex-col w-full min-h-screen py-2 gap-16 2xl:py-20 2xl:gap-2 mx-auto text-zinc-100/85 bg-zinc-950">
+      <section id="about" className="relative flex flex-col gap-10 lg:gap-6 w-full min-h-screen py-16 px-10 md:px-28 bg-zinc-950 mx-auto text-zinc-100/80">
         <Image
           src="/fundo-escuro.png"
           alt="Background Image"
@@ -23,7 +23,7 @@ export default function About() {
         <h1 className="text-2xl text-center lg:mt-18 2xl:mb-20 lg:text-xl">Transformando ideias em soluções digitais</h1>
         <div className="flex flex-col items-center gap-40 lg:gap-0 lg:flex-row justify-around w-full">
           <div className="w-full lg:h-full text-start">
-            <div className="flex flex-col gap-4 w-full lg:h-96">
+            <div className="flex flex-col gap-4 w-full lg:h-96 p-1">
               <h2 className="text-2xl text-center font-bold mb-2 text-blue-600/85 lg:text-xl">Da operação para a tecnologia.</h2>
               <p className="text-lg text-justify hyphens-auto leading-relaxed tracking-tight lg:text-base">
                 Minha trajetória profissional começou muito antes de escrever as primeiras linhas de código.
