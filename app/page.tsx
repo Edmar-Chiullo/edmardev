@@ -7,11 +7,11 @@ import Portfólio from "./components/Project";
 
 export default async function Home() {
   return (
-    <main className="w-full h-screen bg-gray-50 text-gray-900">
+    <main className="w-full bg-gray-50 text-gray-900">
       <HomeContent />
       <About />
-      <Portfólio />
       <Services />
+      <Portfólio />
       <Contact />
       <Footer />
     </main>

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 
@@ -11,8 +11,6 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "edmardev",
   description: "Desenvolvedor freelancer especializado em soluções digitais",
-  themeColor: 'black',
-  viewport: "width=device-width, initial-scale=1.0",  
   keywords: [
     "freelancer",
     "desenvolvedor",
@@ -74,15 +72,21 @@ export const metadata: Metadata = {
   }
 }
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1.0,
+  themeColor: "black",
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${poppins.variable} ${poppins.variable}`}>
+    <html lang="pt-BR" className={poppins.variable}>
       <body
-        className={`${poppins.variable} ${poppins.variable} antialiased`}
+        className={`${poppins.variable} antialiased`}
       >
         {children}
       </body>

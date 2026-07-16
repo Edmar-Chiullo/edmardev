@@ -64,12 +64,10 @@ function PaginationNumber({
   setCurrentPage: (page: number) => void;
 }) {
 
-    function extractionValueComponent(element: EventTarget | null) {
-      const htmlElement = element as HTMLElement;
-      const value = Number(htmlElement.innerText);
-      if (!isNaN(value)) {
-        pageProject(value);
-        setCurrentPage(value);
+    function handleClick() {
+      if (typeof page === 'number') {
+        pageProject(page);
+        setCurrentPage(page);
       }
     }
 
@@ -84,13 +82,19 @@ function PaginationNumber({
         },
     );
 
-    return isActive || position === 'middle' ? (
-        <div className={className} onClick={(element) => extractionValueComponent(element.target)}>{page}</div>
-  ) : (
-    <div className={className} onClick={(element) => extractionValueComponent(element.target) }>
-      {page}
-    </div>
-  );
+    if (isActive || position === 'middle') {
+      return (
+        <div className={className} aria-current={isActive ? 'page' : undefined}>
+          {page}
+        </div>
+      );
+    }
+
+    return (
+      <button className={className} onClick={handleClick} aria-label={`Página ${page}`}>
+        {page}
+      </button>
+    );
 }
 
 function PaginationArrow({
@@ -120,8 +124,8 @@ function PaginationArrow({
   return isDisabled ? (
     <div className={className}>{icon}</div>
   ) : (
-    <p className={className}>
+    <button className={className} aria-label={direction === 'left' ? 'Página anterior' : 'Próxima página'}>
       {icon}
-    </p>
+    </button>
   );
 }

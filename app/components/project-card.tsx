@@ -18,7 +18,7 @@ export default function ProjectCard({ title, description, image, setCarrossel }:
             <div>
                 <h2>Criado por EdmarDev</h2>
             </div>
-            <div className="absolute left-0 top-15 z-40 w-64 h-32 rounded-2xl overflow-hidden">
+            <div className="w-64 h-32 rounded-2xl overflow-hidden">
                 <Image
                     src={image || "/embreve.jpg"}
                     alt={title}

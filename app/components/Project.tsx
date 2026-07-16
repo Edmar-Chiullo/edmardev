@@ -57,7 +57,7 @@ export default function Portfólio() {
                     src="/background-project.png"
                     alt="Background Image"
                     fill
-                    className='absolute'
+                    className=''
                     sizes="100vw"
                     priority
                     style={{

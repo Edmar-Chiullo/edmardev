@@ -6,6 +6,7 @@ export const iconsFillColor = [
         width: 24,
         height: 24,
         fill: 'black',
+        url: "https://www.facebook.com/edmar.chiullo",
     },
     {
         name: "Instagram",
@@ -13,6 +14,7 @@ export const iconsFillColor = [
         width: 24,
         height: 24,
         fill: 'black',
+        url: "https://www.instagram.com/edmar.chiullo",
     },
     {
         name: "Linkedin",
@@ -20,6 +22,7 @@ export const iconsFillColor = [
         width: 24,
         height: 24,
         fill: 'black',
+        url: "https://www.linkedin.com/in/edmar-chiullo",
     },
     {
         name: "GitHub",
@@ -27,6 +30,7 @@ export const iconsFillColor = [
         width: 24,
         height: 24,
         fill: 'black',
+        url: "https://github.com/Edmar-Chiullo",
     },
     {
         name: "Whatsapp",
@@ -34,5 +38,6 @@ export const iconsFillColor = [
         width: 24,
         height: 24,
         fill: 'black',
+        url: "https://wa.me/5543999147899",
     },
 ];
