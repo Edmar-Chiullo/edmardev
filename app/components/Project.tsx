@@ -67,7 +67,7 @@ export default function Portfólio() {
                 />
                 <div className="w-full lg:max-w-6xl mx-auto px-4 gap-2 lg:gap-0 mb-6">
                     <h2 className="text-4xl text-center lg:text-start lg:text-2xl font-bold mb-8 text-blue-700">Portfólio</h2>
-                    <p className="text-lg text-zinc-200 mb-4">Aqui estão alguns dos meus projetos recentes:</p>
+                    <p className="text-lg text-zinc-900 mb-4">Aqui estão alguns dos meus projetos recentes:</p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:gap-6 px-2">
                         {
                             getProject !== undefined ? getProject.map(({ id, title, description, image, imageList }, k) => {
