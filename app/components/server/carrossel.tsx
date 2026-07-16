@@ -58,13 +58,13 @@ export default function Carrossel({ images, title, onClose }: CarrosselProps) {
                     ‹
                 </button>
 
-                <div className='relative w-full h-full flex items-center justify-center'>
+                <div className='relative w-full h-full overflow-hidden'>
                     <Image
                         src={currentImage.image}
                         alt={currentImage.title}
-                        width={1200}
-                        height={800}
-                        className='object-contain max-w-full max-h-full'
+                        fill
+                        sizes='(max-width: 768px) 100vw, 80vw'
+                        className='object-contain p-8'
                         priority
                     />
                 </div>

@@ -23,13 +23,13 @@ export default function HomeContent() {
         <div className="absolute inset-0 bg-zinc-900/60"></div>
         <Header />
         <div className="absolute z-10 flex flex-col w-full h-screen items-center justify-center">
-          <div className="h-96 flex flex-col items-center justify-center gap-4 text-zinc-50/80">
+          <div className="h-96 flex flex-col items-center justify-center gap-4 text-zinc-50/80 p-1">
             <h1 className="text-4xl md:text-6xl font-bold text-center">
-              Olá, eu sou Edmar
+              Transformando desafios operacionais em soluções digitais.
             </h1>
-            <p className="text-lg md:text-2xl text-blue-600/70 text-center mt-4">
-              Desenvolvedor Front-end e UI/UX Designer
-            </p>
+            <h2>
+              Tecnologia aplicada à operação. Soluções que geram resultados.
+            </h2>
           </div>
           <Icons />
         </div>        
