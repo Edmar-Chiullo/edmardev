@@ -4,6 +4,7 @@ import Services from "@/app/components/Services";
 import Contact from "@/app/components/Contact";
 import Footer from "@/app/components/Footer";
 import Portfólio from "./components/Project";
+import Tecnologys from "./components/tecnologys";
 
 export default async function Home() {
   return (
@@ -11,6 +12,7 @@ export default async function Home() {
       <HomeContent />
       <About />
       <Services />
+      <Tecnologys />
       <Portfólio />
       <Contact />
       <Footer />

@@ -8,8 +8,9 @@ import { scroller } from 'react-scroll';
 const menuItems = [
     { label: 'Início', href: '#home' },
     { label: 'Sobre', href: '#about' },
-    { label: 'Portfólio', href: '#portifolio' },
     { label: 'Serviços', href: '#services' },
+    { label: 'Tecnologias', href: '#tecnologys' },
+    { label: 'Portfólio', href: '#portifolio' },
     { label: 'Contato', href: '#contact' },
 ];
 

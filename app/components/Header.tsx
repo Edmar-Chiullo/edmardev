@@ -53,15 +53,20 @@ export default function Header() {
             })}>
             Sobre
           </Link>
-          <Link href="#portifolio" onClick={isActive} className={clsx(`hover:text-blue-100 transition`, {
-            'text-blue-600 hover:text-blue-700': hash === '#portifolio', 'text-zinc-200/80 hover:text-zinc-300/80' : hash !== '#portifolio'
-            })}>
-            Portfólio
-          </Link>
           <Link href="#services" onClick={isActive} className={clsx(`hover:text-blue-100 transition`, {
             'text-blue-600 hover:text-blue-700': hash === '#services', 'text-zinc-200/80 hover:text-zinc-300/80' : hash !== '#services'
             })}>
             Serviços
+          </Link>
+          <Link href="#tecnologys" onClick={isActive} className={clsx(`hover:text-blue-100 transition`, {
+            'text-blue-600 hover:text-blue-700': hash === '#tecnologys', 'text-zinc-200/80 hover:text-zinc-300/80' : hash !== '#tecnologys'
+            })}>
+            Tecnologias
+          </Link>
+          <Link href="#portifolio" onClick={isActive} className={clsx(`hover:text-blue-100 transition`, {
+            'text-blue-600 hover:text-blue-700': hash === '#portifolio', 'text-zinc-200/80 hover:text-zinc-300/80' : hash !== '#portifolio'
+            })}>
+            Portfólio
           </Link>
           <Link href="#contact" onClick={isActive} className={clsx(`hover:text-blue-100 transition`, {
             'text-blue-600 hover:text-blue-700': hash === '#contact', 'text-zinc-200/80 hover:text-zinc-300/80' : hash !== '#contact'

@@ -4,7 +4,7 @@ import { Element } from "react-scroll";
 export default function Contact() {
   return (
     <Element name="contact">
-      <section id="contact" className="flex flex-col items-center justify-center gap-6 w-full py-20 px-6 bg-zinc-100 text-center">
+      <section id="contact" className="flex flex-col items-center justify-center gap-6 w-full min-h-screen py-20 px-6 bg-zinc-100 text-center">
         <h2 className="text-3xl font-bold lg:text-4xl text-blue-700/80">Vamos conversar?</h2>
         <p className="text-lg lg:text-xl">Entre em contato para tirar dúvidas ou solicitar um orçamento.</p>
 
